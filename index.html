@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta chaset="utf-8">
+  <meta http-equiv="U-XA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greg R. Stephens</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="http://weloveiconfonts.com/api/?family=entypo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+</head>
+<body>
+  <div id="main" class="container">
+
+
+    <!-- Mobile Navbar -->
+    <div class="mobile-nav container visible-xs">
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="menu-btn center-block" v-on:click="displayMenu()"><span class="entypo-menu"></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-container container visible-xs" v-bind:class="{ showMenu: nav.showMenu }">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul>
+            <li class="menu" v-for="item in nav.menu">
+              <a class="menu-text" v-bind:href="item.href" v-on:click="hideSection(), displaySection()">{{ item.name }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Desktop Navbar -->
+    <div class="desktop-nav container hidden-xs">
+
+    </div>
+
+
+    <!-- Content -->
+    <div class="content container">
+
+
+      <!-- Welcome -->
+      <div id="welcome" class="hideSection layerA container" v-bind:class="{ displaySection: this.showSection }">
+        <div class="row">
+          <div class="hideWelcomeTitle col-xs-12" v-bind:class="{ welcomeTitle: this.welcome.showWelcome }">
+            <h1 class="title text-center" v-text="welcome.firstName"></h1>
+            <h1 class="title text-center" v-text="welcome.lastName"></h1>
+            <img class="profile-pic img-circle center-block" v-on:load="displayWelcome()" v-bind:src="welcome.img">
+            <h3 class="subtitle text-center" v-text="welcome.subtitle"></h3>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- About -->
+      <div id="about" class="hideSection layerB container" v-bind:class="{ displaySection: this.showSection }">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12">
+                <h2 class="info-title" v-text="about.title"></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <a v-bind:href="about.facebook" target="_blank">
+                  <img class="family-pic img-circle center-block" v-bind:src="about.img">
+                </a>
+              </div>
+              <div class="col-sm-9">
+                <p class="info-text" v-text="about.background"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Skills -->
+      <div id="skills" class="hideSection layerA container" v-bind:class="{ displaySection: this.showSection }">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12">
+                <h2 class="info-title text-right" v-text="skills.title"></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <ul class="skill-list">
+                  <li class="skills" v-for="skill in skills.skillsLt">
+                    <a class="skills-text" v-bind:href="skill.url" target="_blank">
+                      <img class="skills-img img-rounded" v-bind:src="skill.img">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xs-6">
+                <ul class="skill-list">
+                  <li class="skills" v-for="skill in skills.skillsRt">
+                    <a class="skills-text" v-bind:href="skill.url" target="_blank">
+                      <img class="skills-img img-rounded" v-bind:src="skill.img">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Projects -->
+      <div id="projects" class="hideSection layerB container" v-bind:class="{ displaySection: this.showSection }">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12">
+                <h2 class="info-title" v-text="projects.title"></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <h4 class="projects-title text-center" v-text="projects.arcadeGame.name"></h4>
+                <img v-if="this.projects.arcadeGame.showGame" class="projects-img center-block img-rounded" v-bind:src="projects.arcadeGame.img" v-on:click="displayGame()">
+                <div v-else class="projects-info center-block" v-on:click="displayGame()">
+                  <p class="projects-text text-center center-block" v-text="projects.arcadeGame.description"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Education -->
+      <div id="education" class="hideSection layerA container" v-bind:class="{ displaySection: this.showSection }">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12">
+                <h2 class="info-title text-right" v-text="education.title"></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                <img class="school-img center-block img-rounded" v-bind:src="education.udacity.img" />
+              </div>
+              <div class="col-xs-8">
+                <a v-bind:href="education.udacity.url" target="_blank"><h4 class="school-title" v-text="education.udacity.name"></h4></a>
+                <p class="info-text">{{ education.udacity.degree }} in {{ education.udacity.major }}</p>
+                <p class="info-text" v-text="education.udacity.dates"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                <img class="school-img center-block img-rounded" v-bind:src="education.kennesaw.img">
+              </div>
+              <div class="col-xs-8">
+                <a v-bind:href="education.kennesaw.url" target="_blank"><h4 class="school-title" v-text="education.kennesaw.name"></h4></a>
+                <p class="info-text">{{ education.kennesaw.degree }} in {{ education.kennesaw.major }}</p>
+                <p class="info-text" v-text="education.kennesaw.dates"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Contact -->
+      <div id="contact" class="hideSection layerB container" v-bind:class="{ displaySection: this.showSection }">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12">
+                <h2 class="info-title" v-text="contact.title"></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <p class="info-text" v-text="contact.name"></p>
+                <p class="info-text">Cell: <a v-text="contact.phone.cell" v-bind:href="contact.phone.call" target="_blank"></a></p>
+                <p class="info-text">Email: <a v-text="contact.email.address" v-bind:href="contact.email.url" target="_blank"></a></p>
+                <p class="info-text" class="info-text">LinkedIn: <a v-bind:href="contact.linkedin.url" v-text="contact.linkedin.username" target="_blank"></a></p>
+                <p class="info-text">Github: <a v-bind:href="contact.github.url" v-text="contact.github.username" target="_blank"></a></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <h3 class="info-title" v-text="contact.location.title"></h3>
+                <div id="map" class="center-block"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="js/vue.js"></script>
+  <script src="js/main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaUPq3IyzhaqFDFXxWk1gUyTx7-bNKDks&callback=Main.initMap">
+  </script>
+</body>
+</html>
