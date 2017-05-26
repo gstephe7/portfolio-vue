@@ -9,7 +9,18 @@
   <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width: 543px)">
   <link href="css/laptop.css" rel="stylesheet" media="screen and (min-width: 544px) and (max-width: 767px)">
   <link href="css/desktop.css" rel="stylesheet" media="screen and (min-width: 768px)">
-  <link href="http://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-99774746-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
   <div id="main" class="container">
@@ -19,7 +30,7 @@
     <div class="nav container">
       <div class="row">
         <div class="col-xs-12">
-          <button class="menu-btn center-block" v-on:click="displayMenu()"><span class="entypo-menu"></span></button>
+          <button class="menu-btn center-block" v-on:click="displayMenu()"><i class="fa fa-bars"></i></button>
         </div>
       </div>
     </div>
@@ -179,23 +190,23 @@
             </div>
             <div class="row">
               <div class="col-xs-3">
-                <a v-bind:href="contact.email.url" target="_blank">
-                  <span class="entypo-mail icon"></span>
+                <a class="icon" v-bind:href="contact.email.url" target="_blank">
+                  <i class="fa fa-envelope"></i>
                 </a>
               </div>
               <div class="col-xs-3">
-                <a v-bind:href="contact.phone.call" target="_blank">
-                  <span class="entypo-phone icon"></span>
+                <a class="icon" v-bind:href="contact.phone.call" target="_blank">
+                  <i class="fa fa-phone"></i>
                 </a>
               </div>
               <div class="col-xs-3">
-                <a v-bind:href="contact.linkedin.url" target="_blank">
-                  <span class="entypo-linkedin icon"></span>
+                <a class="icon" v-bind:href="contact.linkedin.url" target="_blank">
+                  <i class="fa fa-linkedin"></i>
                 </a>
               </div>
               <div class="col-xs-3">
-                <a v-bind:href="contact.github.url" target="_blank">
-                  <span class="entypo-github icon"></span>
+                <a class="icon" v-bind:href="contact.github.url" target="_blank">
+                  <i class="fa fa-github-alt"></i>
                 </a>
               </div>
             </div>
@@ -214,7 +225,7 @@
   </div>
   <script src="js/vue.js"></script>
   <script src="js/main.js"></script>
-  <script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCaUPq3IyzhaqFDFXxWk1gUyTx7-bNKDks&callback=Main.initMap">
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaUPq3IyzhaqFDFXxWk1gUyTx7-bNKDks&callback=Main.initMap">
   </script>
 </body>
 </html>

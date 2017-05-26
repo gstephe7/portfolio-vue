@@ -1,5 +1,3 @@
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-
 html, body, .container {
   overflow-x: hidden;
   margin: 0;
@@ -41,10 +39,6 @@ html, body, .container {
   left: 0;
 }
 
-/* entypo */
-[class*="entypo-"]:before {
-  font-family: 'entypo', sans-serif;
-}
 
 @media screen and (min-width: 544px) and (max-width: 767px) {
   .hideSection {
@@ -252,7 +246,7 @@ html, body, .container {
 
   .icon {
     color: white;
-    font-size: 7vw;
+    font-size: 8vw;
     padding-left: 3vw;
     opacity: .8;
     transition: all 250ms;
@@ -261,6 +255,7 @@ html, body, .container {
   .icon:hover {
     font-size: 10vw;
     opacity: 1;
+    color: royalblue;
   }
 
   #map {
