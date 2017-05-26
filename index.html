@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta chaset="utf-8">
+  <meta charset="utf-8">
   <meta http-equiv="U-XA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Greg R. Stephens</title>
+  <link href="http://weloveiconfonts.com/api/?family=entypo" rel="stylesheet">
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width: 543px)">
   <link href="css/laptop.css" rel="stylesheet" media="screen and (min-width: 544px) and (max-width: 767px)">
   <link href="css/desktop.css" rel="stylesheet" media="screen and (min-width: 768px)">
-  <link href="http://weloveiconfonts.com/api/?family=entypo" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 </head>
 <body>
@@ -47,7 +47,7 @@
           <div class="hideWelcomeTitle col-xs-12" v-bind:class="{ welcomeTitle: this.welcome.showWelcome }">
             <h1 class="title text-center" v-text="welcome.firstName"></h1>
             <h1 class="title text-center" v-text="welcome.lastName"></h1>
-            <img class="profile-pic img-circle center-block" v-on:load="displayWelcome()" v-bind:src="welcome.img">
+            <img class="profile-pic img-circle center-block" v-on:load="displayWelcome()" v-bind:src="welcome.img" v-bind:alt="welcome.alt">
             <h3 class="subtitle text-center" v-text="welcome.subtitle"></h3>
           </div>
         </div>
@@ -66,7 +66,7 @@
             <div class="row">
               <div class="col-sm-6">
                 <a v-bind:href="about.facebook" target="_blank">
-                  <img class="family-pic img-circle center-block" v-bind:src="about.img">
+                  <img class="family-pic img-circle center-block" v-bind:src="about.img" v-bind:alt="about.alt">
                 </a>
               </div>
               <div class="col-sm-6">
@@ -92,7 +92,7 @@
                 <ul class="skill-list">
                   <li class="skills" v-for="skill in skills.skillsLt">
                     <a class="skills-text" v-bind:href="skill.url" target="_blank">
-                      <img class="skills-img img-rounded" v-bind:src="skill.img">
+                      <img class="skills-img img-rounded" v-bind:src="skill.img" v-bind:alt="skill.alt">
                     </a>
                   </li>
                 </ul>
@@ -101,7 +101,7 @@
                 <ul class="skill-list">
                   <li class="skills" v-for="skill in skills.skillsRt">
                     <a class="skills-text" v-bind:href="skill.url" target="_blank">
-                      <img class="skills-img img-rounded" v-bind:src="skill.img">
+                      <img class="skills-img img-rounded" v-bind:src="skill.img" v-bind:alt="skill.alt">
                     </a>
                   </li>
                 </ul>
@@ -124,7 +124,7 @@
             <div class="row">
               <div class="col-xs-12">
                 <h4 class="projects-title text-center" v-text="projects.arcadeGame.name"></h4>
-                <img v-if="this.projects.arcadeGame.showGame" class="projects-img center-block img-rounded" v-bind:src="projects.arcadeGame.img" v-on:click="displayGame()">
+                <img v-if="this.projects.arcadeGame.showGame" class="projects-img center-block img-rounded" v-bind:src="projects.arcadeGame.img" v-on:click="displayGame()" v-bind:alt="projects.arcadeGame.alt">
                 <div v-else class="projects-info center-block" v-on:click="displayGame()">
                   <p class="projects-text text-center center-block" v-text="projects.arcadeGame.description"></p>
                 </div>
@@ -146,7 +146,7 @@
             </div>
             <div class="row">
               <div class="col-xs-4">
-                <img class="school-img center-block img-rounded" v-bind:src="education.udacity.img" />
+                <img class="school-img center-block img-rounded" v-bind:src="education.udacity.img" v-bind:alt="education.udacity.alt">
               </div>
               <div class="col-xs-8">
                 <a v-bind:href="education.udacity.url" target="_blank"><h4 class="school-title" v-text="education.udacity.name"></h4></a>
@@ -156,7 +156,7 @@
             </div>
             <div class="row">
               <div class="col-xs-4">
-                <img class="school-img center-block img-rounded" v-bind:src="education.kennesaw.img">
+                <img class="school-img center-block img-rounded" v-bind:src="education.kennesaw.img" v-bind:alt="education.kennesaw.alt">
               </div>
               <div class="col-xs-8">
                 <a v-bind:href="education.kennesaw.url" target="_blank"><h4 class="school-title" v-text="education.kennesaw.name"></h4></a>

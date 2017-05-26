@@ -18,27 +18,29 @@ var Main = new Vue({
 	    firstName: 'GREG',
       lastName: 'STEPHENS',
 	    img: 'img/profilepic.jpg',
+      alt: 'Greg Stephens',
 	    subtitle: 'FRONT-END WEB DEVELOPER'
 	  },
 	  about: {
 	    title: 'ABOUT',
 	    img: 'img/family.jpg',
+      alt: 'Greg Stephens and his family at Niagara Falls',
       facebook: 'https://www.facebook.com/ndgreg39',
 	    background: 'Hello, my name is Greg Stephens and I\'m a Front-End Web Developer from Athens, GA. I pride myself on being creative, easy-going, and driven to grow within my career. I\'m a father to an awesome 1 year old son and a husband to a wonderful wife of 3 years. My interests include spending time with my family, playing music, Georgia Football, Atlanta United Soccer, investing, politics, economics, anything by Louis CK, and creating things.'
     },
 	  skills: {
 		  title: 'SKILLS',
 		  skillsLt: [
-		    {name: 'JavaScript', url: 'https://www.javascript.com', img: 'img/javascript.jpg'},
-		    {name: 'Vue.js', url: 'https://vuejs.org/', img: 'img/vue.jpg'},
-		    {name: 'jQuery', url: 'https://jquery.com/', img: 'img/jquery.jpg'},
-        {name: 'HTML5', url: 'https://en.wikipedia.org/wiki/HTML5', img: 'img/html.jpg'}
+		    {name: 'JavaScript', url: 'https://www.javascript.com', img: 'img/javascript.jpg', alt: 'JavaScript Logo'},
+		    {name: 'Vue.js', url: 'https://vuejs.org/', img: 'img/vue.jpg', alt: 'Vue Logo'},
+		    {name: 'jQuery', url: 'https://jquery.com/', img: 'img/jquery.jpg', alt: 'jQuery Logo'},
+        {name: 'HTML5', url: 'https://en.wikipedia.org/wiki/HTML5', img: 'img/html.jpg', alt: 'HTML5 Logo'}
 		  ],
       skillsRt: [
-        {name: 'CSS3', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3', img: 'img/css.jpg'},
-		    {name: 'Bootstrap', url: 'http://getbootstrap.com/', img: 'img/bootstrap.jpg'},
-        {name: 'Git', url: 'https://git-scm.com/', img: 'img/git.jpg'},
-        {name: 'Google Analytics', url: 'https://analytics.google.com', img: 'img/analytics.jpg'}
+        {name: 'CSS3', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3', img: 'img/css.jpg', alt: 'CSS3 Logo'},
+		    {name: 'Bootstrap', url: 'http://getbootstrap.com/', img: 'img/bootstrap.jpg', alt: 'Bootstrap Logo'},
+        {name: 'Git', url: 'https://git-scm.com/', img: 'img/git.jpg', alt: 'Git Logo'},
+        {name: 'Google Analytics', url: 'https://analytics.google.com', img: 'img/analytics.jpg', alt: 'Google Analytics Logo'}
       ]
     },
     projects: {
@@ -47,6 +49,7 @@ var Main = new Vue({
         showGame: true,
         name: 'Frogger: Presidential Edition',
         img: 'img/arcadegame.jpg',
+        alt: 'Screenshot of Frogger Clone Project',
         description: 'I completed this project for Udacity\'s Front-End Development Nanodegree. Object-oriented JavaScript and HTML5 Canvas were used to create this clone of the classic arcade game, Frogger. I put my own spin on the game by using presidential candidates as the players.'
       }
     },
@@ -58,6 +61,7 @@ var Main = new Vue({
         major: 'Front-End Web Development',
         dates: '2017',
         img: 'img/udacity.jpg',
+        alt: 'Udacity logo',
         url: 'https://www.udacity.com/'
       },
       kennesaw: {
@@ -66,26 +70,10 @@ var Main = new Vue({
         major: 'History Education',
         dates: '2009-2012',
         img: 'img/ksu.jpg',
+        alt: 'Kennesaw State Logo',
         url: 'http://www.kennesaw.edu/'
       }
     },
-    interests: {
-      title: 'INTERESTS',
-      interestsLt: [
-        'Being a Dad',
-        'Music',
-        'Creating things',
-        'Politics',
-        'Economics'
-      ],
-      interestsRt: [
-        'History',
-        'Investing',
-        'Georgia Bulldogs Football',
-        'Atlanta United Soccer',
-        'Louis CK\'s Comedy'
-      ]
-	  },
     contact: {
       title: 'CONTACT',
       name: 'Name: Greg Stephens',
