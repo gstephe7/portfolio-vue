@@ -103,7 +103,8 @@ var Main = new Vue({
       },
       github: {
         username: 'gstephe7',
-        url: 'https://www.github.com/gstephe7'
+        url: 'https://www.github.com/gstephe7',
+        icon: 'entypo-github'
       },
       location: {
         title: 'LOCATION',
