@@ -17,8 +17,8 @@ var Main = new Vue({
       showWelcome: false,
 	    firstName: 'GREG',
       lastName: 'STEPHENS',
-	    img: 'img/profilepic.jpg',
-      alt: 'Greg Stephens',
+      logo: 'img/gs-logo.png',
+      alt: 'Greg Stephens Logo',
 	    subtitle: 'FRONT-END WEB DEVELOPER'
 	  },
 	  about: {
@@ -37,10 +37,10 @@ var Main = new Vue({
         {name: 'HTML5', url: 'https://en.wikipedia.org/wiki/HTML5', img: 'img/html.jpg', alt: 'HTML5 Logo'}
 		  ],
       skillsRt: [
+        {name: 'Adobe Illustrator', url: 'http://www.adobe.com/products/illustrator.html', img: 'img/illustrator.jpg', alt: 'Adobe Illustrator Logo'},
         {name: 'CSS3', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3', img: 'img/css.jpg', alt: 'CSS3 Logo'},
 		    {name: 'Bootstrap', url: 'http://getbootstrap.com/', img: 'img/bootstrap.jpg', alt: 'Bootstrap Logo'},
-        {name: 'Git', url: 'https://git-scm.com/', img: 'img/git.jpg', alt: 'Git Logo'},
-        {name: 'Google Analytics', url: 'https://analytics.google.com', img: 'img/analytics.jpg', alt: 'Google Analytics Logo'}
+        {name: 'Git', url: 'https://git-scm.com/', img: 'img/git.jpg', alt: 'Git Logo'}
       ]
     },
     projects: {

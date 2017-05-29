@@ -11,6 +11,7 @@
   <link href="css/desktop.css" rel="stylesheet" media="screen and (min-width: 768px)">
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link rel="shortcut icon" href="img/gs-icon.png">
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -57,7 +58,7 @@
           <div class="hideWelcomeTitle col-xs-12" v-bind:class="{ welcomeTitle: this.welcome.showWelcome }">
             <h1 class="title text-center" v-text="welcome.firstName"></h1>
             <h1 class="title text-center" v-text="welcome.lastName"></h1>
-            <img class="profile-pic img-circle center-block" v-on:load="displayWelcome()" v-bind:src="welcome.img" v-bind:alt="welcome.alt">
+            <img class="logo center-block" v-on:load="displayWelcome()" v-bind:src="welcome.logo" v-bind:alt="welcome.alt">
             <h3 class="subtitle text-center" v-text="welcome.subtitle"></h3>
           </div>
         </div>

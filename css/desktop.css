@@ -7,7 +7,7 @@ html, body, .container {
 }
 
 .content {
-  background-image: url('beach.jpg');
+  background-image: url('mountains.jpg');
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -113,7 +113,7 @@ html, body, .container {
   }
 
   .welcomeTitle {
-    padding-top: 7vh;
+    padding-top: 3vh;
     margin-left: 0;
     opacity: 1;
   }
@@ -125,9 +125,14 @@ html, body, .container {
     transition: all 500ms ease;
   }
 
-  .profile-pic {
-    border: thick solid white;
-    transition: all 500ms ease;
+  .logo {
+    width: 125px;
+    padding-top: 20px;
+    transition: all 250ms;
+  }
+
+  .logo:hover {
+    width: 150px;
   }
 
   .subtitle {
