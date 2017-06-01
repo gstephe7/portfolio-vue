@@ -3,7 +3,7 @@ var Main = new Vue({
   data: {
     nav: {
       showMenu: false,
-      logo: 'img/gs-logo.png',
+      logo: 'img/gslogo.png',
       menu: [
         { name: 'HOME', href: 'index.html' },
         { name: 'PROJECTS', href: 'projects.html' },

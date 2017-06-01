@@ -17,7 +17,7 @@ html, body, .container {
     overflow: hidden;
   }
 
-  .icon {
+  .logo {
     height: 50px;
     margin-left: 20px;
     margin-top: 10px;
@@ -48,14 +48,14 @@ html, body, .container {
   }
 
   .showMenu {
-    height: 100px;
+    height: 115px;
     opacity: 1;
   }
 
   .menu-item {
     color: rgb(216, 210, 156);
     list-style-type: none;
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 3px;
     margin-right: 10px;
     font-family: 'Raleway', sans-serif;
@@ -218,7 +218,7 @@ html, body, .container {
     z-index: 1000;
   }
 
-  .icon {
+  .logo {
     height: 50px;
     margin-left: 20px;
     margin-top: 15px;

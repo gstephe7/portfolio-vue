@@ -9,7 +9,7 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,300" rel="stylesheet">
-  <link rel="icon" href="img/gs-icon.png">
+  <link rel="icon" href="img/gslogo.png">
 </head>
 <body>
   <div id="main" class="container">
@@ -18,7 +18,7 @@
     <div class="mobile-nav container visible-xs">
       <div class="row">
         <div class="col-xs-10">
-          <img class="icon">
+          <img class="logo" v-bind:src="nav.logo">
         </div>
         <div class="col-xs-2">
           <button class="menu-btn pull-right" v-on:click="displayMenu()"><i class="fa fa-bars"></i></button>
@@ -41,7 +41,7 @@
     <div class="desktop-nav container hidden-xs">
       <div class="row">
         <div class="col-xs-4">
-          <img class="icon">
+          <img class="logo" v-bind:src="nav.logo">
         </div>
         <div class="col-xs-8">
           <ul class="menu pull-right">
