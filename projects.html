@@ -10,16 +10,6 @@
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,300" rel="stylesheet">
   <link rel="icon" href="img/gs-icon.png">
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-99774746-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </head>
 <body>
   <div id="main" class="container">
@@ -63,95 +53,64 @@
       </div>
     </div>
 
-    <!-- Jumbotron -->
+    <!-- Header -->
     <div class="container">
       <div class="row">
-        <div class="jumbo col-xs-12">
+        <div class="header col-xs-12">
           <div class="layer">
-            <h1 class="title text-center" v-text="jumbo.name" v-bind:class="{ titleShow : this.jumbo.showJumbo }"></h1>
-            <h2 class="subtitle text-center" v-text="jumbo.subtitle" v-bind:class="{ subtitleShow : this.jumbo.showJumbo }"></h2>
+            <h1 class="header-title text-center" v-text="projects.title"></h1>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- About -->
+    <!-- Benco Website -->
     <div class="section container">
       <div class="row">
         <div class="col-xs-12">
-          <h3 class="section-title" v-text="about.title"></h3>
+          <h3 class="section-title" v-text="projects.benco.name"></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-md-5">
-          <img class="section-img center-block img-circle" v-bind:src="about.img" v-bind:alt="about.alt" v-on:load="displayJumbo()">
+          <img class="section-img center-block img-rounded" v-bind:src="projects.benco.img" v-bind:alt="projects.benco.alt" v-on:load="displayJumbo()">
         </div>
         <div class="col-md-7">
-          <p class="section-text" v-text="about.description"></p>
+          <p class="section-text" v-text="projects.benco.description"></p>
         </div>
       </div>
     </div>
 
-    <!-- Skills -->
+    <!-- Portfolio Website -->
     <div class="section container">
       <div class="row">
         <div class="col-xs-12">
-          <h3 class="section-title" v-text="skills.title"></h3>
+          <h3 class="section-title" v-text="projects.portfolio.name"></h3>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12">
-          <ul class="section-list text-center">
-            <li class="section-logo text-center" v-for="skill in skills.skillsUp">
-              <a v-bind:href="skill.href">
-                <img class="section-logo img-rounded center-block" v-bind:src="skill.img">
-              </a>
-            </li>
-          </ul>
-          <ul class="section-list text-center">
-            <li class="section-logo text-center" v-for="skill in skills.skillsDn">
-              <a v-bind:href="skill.href" target="_blank">
-                <img class="section-logo img-rounded center-block" v-bind:src="skill.img">
-              </a>
-            </li>
-          </ul>
+        <div class="col-md-5">
+          <img class="section-img center-block img-rounded" v-bind:src="projects.portfolio.img" v-bind:alt="projects.portfolio.alt" v-on:load="displayJumbo()">
+        </div>
+        <div class="col-md-7">
+          <p class="section-text" v-text="projects.portfolio.description"></p>
         </div>
       </div>
     </div>
 
-    <!-- Education -->
+    <!-- Arcade Game -->
     <div class="section container">
       <div class="row">
         <div class="col-xs-12">
-          <h3 class="section-title" v-text="education.title"></h3>
+          <h3 class="section-title" v-text="projects.game.name"></h3>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-4">
-          <img class="section-school center-block img-rounded" v-bind:src="education.udacity.img" v-bind:alt="education.udacity.alt">
+        <div class="col-md-5">
+          <img class="section-img center-block img-rounded" v-bind:src="projects.game.img" v-bind:alt="projects.game.alt" v-on:load="displayJumbo()">
         </div>
-        <div class="col-xs-8">
-          <a v-bind:href="education.udacity.href" target="_blank">
-            <h3 class="section-subtitle" v-text="education.udacity.name"></h3>
-          </a>
-          <p class="section-text">
-            {{ education.udacity.degree }} in {{ education.udacity.major }}
-          </p>
-          <p class="section-text" v-text="education.udacity.dates"></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-4">
-          <img class="section-school center-block img-rounded" v-bind:src="education.kennesaw.img" v-bind:alt="education.kennesaw.alt">
-        </div>
-        <div class="col-xs-8">
-          <a v-bind:href="education.kennesaw.href" target="_blank">
-            <h3 class="section-subtitle" v-text="education.kennesaw.name"></h3>
-          </a>
-          <p class="section-text">
-            {{ education.kennesaw.degree }} in {{ education.kennesaw.major }}
-          </p>
-          <p class="section-text" v-text="education.kennesaw.dates"></p>
+        <div class="col-md-7">
+          <p class="section-text" v-text="projects.game.description"></p>
         </div>
       </div>
     </div>

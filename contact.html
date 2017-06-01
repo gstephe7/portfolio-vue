@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="U-XA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greg R. Stephens</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,300" rel="stylesheet">
+  <link rel="icon" href="img/gs-icon.png">
+</head>
+<body>
+  <div id="main" class="container">
+
+    <!-- Mobile Navbar -->
+    <div class="mobile-nav container visible-xs">
+      <div class="row">
+        <div class="col-xs-10">
+          <img class="icon">
+        </div>
+        <div class="col-xs-2">
+          <button class="menu-btn pull-right" v-on:click="displayMenu()"><i class="fa fa-bars"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="menu container visible-xs" v-bind:class="{ showMenu: this.nav.showMenu }">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="pull-right">
+            <li class="menu-item text-right" v-for="item in nav.menu">
+              <a class="menu-item" v-text="item.name" v-bind:href="item.href"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop Navbar -->
+    <div class="desktop-nav container hidden-xs">
+      <div class="row">
+        <div class="col-xs-4">
+          <img class="icon">
+        </div>
+        <div class="col-xs-8">
+          <ul class="menu pull-right">
+            <li class="menu-item" v-for="item in nav.menu">
+              <a class="menu-item" v-text="item.name" v-bind:href="item.href"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <div class="container">
+      <div class="row">
+        <div class="header col-xs-12">
+          <div class="layer">
+            <h1 class="header-title text-center" v-text="contact.title"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="section container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul>
+            <li class="section-text" v-for="item in contact.contact">
+              <p class="section-text">
+                {{ item.name }}: <a v-bind:href="item.href" v-text="item.info" target="_blank"></a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="map" class="center-block"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer container">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="footer-list pull-right">
+            <li class="footer-text" v-for="item in contact.contact">
+              <a class="footer-text" v-bind:href="item.href" target="_blank"><i v-bind:class="item.icon"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="js/vue.min.js"></script>
+  <script src="js/main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaUPq3IyzhaqFDFXxWk1gUyTx7-bNKDks&callback=Main.initMap">
+  </script>
+</body>
+</html>
