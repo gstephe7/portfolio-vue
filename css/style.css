@@ -145,6 +145,7 @@ html, body, .container {
 
   .section-list {
     margin-top: 25px;
+    padding: 0;
   }
 
   .section-logo {
@@ -152,7 +153,7 @@ html, body, .container {
     display: inline-block;
     width: 90px;
     opacity: .8;
-    margin: 0px 25px 10px 0px;
+    margin: 5px;
     transition: 500ms all;
   }
 
@@ -317,6 +318,7 @@ html, body, .container {
 
   .section-list {
     margin-top: 25px;
+    padding: 0;
   }
 
   .section-logo {
@@ -324,7 +326,7 @@ html, body, .container {
     display: inline-block;
     width: 150px;
     opacity: .8;
-    margin: 0px 25px 10px 0px;
+    margin: 10px;
     transition: 500ms all;
   }
 
